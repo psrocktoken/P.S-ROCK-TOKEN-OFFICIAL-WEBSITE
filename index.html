@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PS Rock Token (PS) | Official Crypto Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#26a17b;
+  --accent:#1dd1a1;
+  --dark:#0b0f14;
+  --dark2:#06080c;
+  --gray:#9aa4b2;
+  --card:#121824;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--dark);
+  color:#fff;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:var(--primary);text-decoration:none}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+
+/* ===== FLOATING BG ANIMATION ===== */
+.bg{
+  position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(circle at top, #10231c, #050707 70%);
+}
+.bg span{
+  position:absolute;width:8px;height:8px;border-radius:50%;
+  background:rgba(38,161,123,.25);
+  animation:float 18s linear infinite;
+}
+@keyframes float{
+  from{transform:translateY(110vh)}
+  to{transform:translateY(-10vh)}
+}
+
+/* ===== NAV ===== */
+nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,15,20,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.05)
+}
+.navbar{
+  display:flex;align-items:center;justify-content:space-between;height:72px
+}
+.navbar h1{font-size:1.2rem;font-weight:800}
+.navbar ul{display:flex;gap:28px;list-style:none}
+.navbar a{color:#fff;font-weight:500}
+
+/* ===== HERO ===== */
+.hero{
+  padding:130px 0 110px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center
+}
+.hero h2{
+  font-size:3.3rem;font-weight:800;
+  animation:fadeUp 1.2s ease forwards
+}
+.hero p{
+  color:var(--gray);margin-top:22px;font-size:1.05rem;
+  animation:fadeUp 1.6s ease forwards
+}
+.hero-actions{margin-top:38px;display:flex;gap:18px;flex-wrap:wrap}
+.btn{
+  padding:15px 30px;border-radius:10px;font-weight:600;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#000;box-shadow:0 10px 30px rgba(38,161,123,.25)
+}
+.btn.outline{background:none;border:1px solid var(--primary);color:var(--primary)}
+.hero img{
+  width:100%;max-width:360px;justify-self:center;
+  animation:floatLogo 6s ease-in-out infinite
+}
+@keyframes floatLogo{50%{transform:translateY(-18px)}}
+
+/* ===== SECTIONS ===== */
+section{padding:100px 0}
+section h3{font-size:2.3rem;margin-bottom:18px}
+.section-desc{color:var(--gray);max-width:800px;margin-bottom:55px}
+
+/* ===== STATS ===== */
+.stats{background:var(--dark2)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.stat{background:var(--card);padding:32px;border-radius:16px;animation:fadeUp 1s ease forwards}
+.stat h4{font-size:1.7rem;color:var(--primary)}
+.stat p{color:var(--gray);margin-top:6px}
+
+/* ===== CARDS ===== */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.card{
+  background:var(--card);padding:38px;border-radius:18px;
+  transition:.4s
+}
+.card:hover{transform:translateY(-12px)}
+.card h4{margin-bottom:12px}
+.card p{color:var(--gray)}
+
+/* ===== TABLE ===== */
+.table{
+  width:100%;border-collapse:collapse;background:var(--card);
+  border-radius:18px;overflow:hidden
+}
+.table th,.table td{
+  padding:18px;border-bottom:1px solid rgba(255,255,255,.05)
+}
+.table th{color:var(--gray);font-weight:500}
+
+/* ===== TIMELINE ===== */
+.timeline{display:grid;gap:30px}
+.step{background:var(--card);padding:32px;border-radius:18px}
+.step span{color:var(--primary);font-weight:700}
+
+/* ===== FOOTER ===== */
+footer{background:var(--dark2);padding:60px 0;color:var(--gray)}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:none}
+}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div class="bg" id="bg"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="container navbar">
+    <h1>PS Rock</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#token">Token</a></li>
+      <li><a href="#utility">Utility</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h2>PS Rock Token (PS)</h2>
+      <p>PS Rock is a blockchain-based BEP20 digital asset focused on transparency, strong ownership structure, and long-term crypto fundamentals. Designed with simplicity and scalability in mind.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#token">Token Information</a>
+        <a class="btn outline" href="#utility">Use Cases</a>
+      </div>
+    </div>
+    <img src="https://ik.imagekit.io/rbugg1o1c/WhatsApp_Image_2025-12-16_at_22.32.25__1_-removebg-preview%20(1).svg" alt="PS Rock Token">
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><h4>1e15</h4><p>Total Supply</p></div>
+    <div class="stat"><h4>18</h4><p>Decimals</p></div>
+    <div class="stat"><h4>BEP20</h4><p>Token Standard</p></div>
+    <div class="stat"><h4>BSC</h4><p>Blockchain Network</p></div>
+  </div>
+</section>
+
+<!-- ABOUT CRYPTO -->
+<section id="about">
+  <div class="container">
+    <h3>What is PS Rock?</h3>
+    <p class="section-desc">PS Rock is a crypto token deployed on Binance Smart Chain following the BEP20 standard. It allows peer-to-peer transfers, on-chain balance tracking, and transparent ownership. The project aims to provide a clean, understandable digital asset without unnecessary complexity.</p>
+    <div class="cards">
+      <div class="card"><h4>Decentralized</h4><p>Runs on BSC blockchain with immutable smart contract logic.</p></div>
+      <div class="card"><h4>Secure</h4><p>Solidity 0.8.x with overflow protection and owner-controlled metadata.</p></div>
+      <div class="card"><h4>Transparent</h4><p>All supply and balances are publicly verifiable on-chain.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKEN -->
+<section id="token">
+  <div class="container">
+    <h3>Token Information</h3>
+    <table class="table">
+      <tr><th>Name</th><td>PS Rock</td></tr>
+      <tr><th>Symbol</th><td>PS</td></tr>
+      <tr><th>Decimals</th><td>18</td></tr>
+      <tr><th>Total Supply</th><td>1,000,000,000,000,000 PS</td></tr>
+      <tr><th>Standard</th><td>BEP20</td></tr>
+      <tr><th>Network</th><td>Binance Smart Chain</td></tr>
+      <tr><th>Owner</th><td>PS</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- UTILITY -->
+<section id="utility">
+  <div class="container">
+    <h3>Token Utility</h3>
+    <p class="section-desc">PS Rock is structured to support future utility and ecosystem expansion. Potential utilities may evolve with community and development goals.</p>
+    <div class="cards">
+      <div class="card"><h4>Value Representation</h4><p>Can act as a reference digital asset within future platforms.</p></div>
+      <div class="card"><h4>Payments</h4><p>Designed for fast, low-cost transfers on BSC.</p></div>
+      <div class="card"><h4>Ecosystem Ready</h4><p>Expandable for dApps, integrations, and services.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <h3>Roadmap</h3>
+    <div class="timeline">
+      <div class="step"><span>Phase 1</span><p>Token deployment, logo setup, official website.</p></div>
+      <div class="step"><span>Phase 2</span><p>BscScan updates, documentation, transparency focus.</p></div>
+      <div class="step"><span>Phase 3</span><p>Utility planning, ecosystem research.</p></div>
+      <div class="step"><span>Phase 4</span><p>Long-term development based on adoption.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h3>Contact</h3>
+    <p class="section-desc">Official communication channel:</p>
+    <p>📧 <a href="mailto:p.srocktoken@gmail.com">p.srocktoken@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2025 PS Rock Token. All rights reserved.</p>
+    <p>Disclaimer: This website is for informational purposes only and does not constitute financial advice.</p>
+  </div>
+</footer>
+
+<script>
+// floating background particles
+const bg=document.getElementById('bg');
+for(let i=0;i<40;i++){
+  const b=document.createElement('span');
+  b.style.left=Math.random()*100+'%';
+  b.style.animationDuration=(12+Math.random()*20)+'s';
+  bg.appendChild(b);
+}
+</script>
+
+</body>
+</html>
